@@ -1,10 +1,12 @@
 import React from 'react'
-
-import { ExampleComponent } from 'use-mail-to'
-import 'use-mail-to/dist/index.css'
+import { UseMailTo } from 'use-mail-to'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <UseMailTo email="foo@bar.baz" subject="Hello & Welcome" body="Hello world!">
+      Mail me!
+    </UseMailTo>
+  )
 }
 
 export default App

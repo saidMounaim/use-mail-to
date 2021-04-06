@@ -1,6 +1,12 @@
 import React from 'react'
-import styles from './styles.module.css'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+export const UseMailTo = ({ email, subject = '', body = '', children }) => {
+
+  let params = subject || body ? '?' : '';
+  if (subject) params += `subject=${encodeURIComponent(subject)}`;
+  if (body) params += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`;
+
+  return (
+    <a href={`mailto:${email}${params}`}>{children}</a>
+  )
 }

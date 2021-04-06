@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import { useMailTo } from '.'
 
-describe('ExampleComponent', () => {
+describe('useMailTo', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(useMailTo).toBeTruthy()
   })
 })

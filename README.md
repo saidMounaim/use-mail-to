@@ -1,4 +1,4 @@
-# use-mail-to
+# React Use Mail To
 
 > Renders a link formatted to send an email (mailto: link).
 
@@ -13,16 +13,20 @@ npm install --save use-mail-to
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'use-mail-to'
-import 'use-mail-to/dist/index.css'
+import { UseMailTo } from 'use-mail-to'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  return (
+    <UseMailTo email="foo@bar.baz" subject="Welcome" body="Hello world!">
+      Mail me!
+    </UseMailTo>
+  )
 }
+
+export default App
+
 ```
 
 ## License
